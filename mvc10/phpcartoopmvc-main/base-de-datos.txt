@@ -1,0 +1,46 @@
+CREATE DATABASE ks_shop
+use ks_shop
+
+
+CREATE TABLE `categories` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(32) NOT NULL,
+  PRIMARY KEY (`id`)
+);
+
+
+CREATE TABLE `products` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `category_id` int(11) NOT NULL,
+  `name` varchar(32) NOT NULL,
+  `description` text NOT NULL,
+  `price` double NOT NULL,
+  `image` text NOT NULL,
+  PRIMARY KEY (`id`)
+);
+========================categories=========================================
+INSERT INTO `categories` VALUES(1, 'Toys');
+INSERT INTO `categories` VALUES(2, 'Electronics');
+INSERT INTO `categories` VALUES(3, 'Clothing');
+
+
+
+========================PRODUCTS=========================================
+
+INSERT INTO `products` VALUES(1, 1, 'Beach Toys', 'Beach toys description here.', 8.99, 'product_beachtoys.jpg');
+INSERT INTO `products` VALUES(2, 1, 'Stuffed Bear', 'Stuffed bear description here.', 15.99, 'product_bear.jpg');
+INSERT INTO `products` VALUES(3, 2, 'Computer Monitor', 'Computer monitor description here.', 299.99, 'product_computermonitor.jpg');
+INSERT INTO `products` VALUES(4, 1, 'Stuffed Hippo', 'Stuffed Hippo description.', 13, 'product_hippo.jpg');
+INSERT INTO `products` VALUES(5, 1, 'Stuffed Reindeer', 'Reindeer description here.', 14.49, 'product_reindeer.jpg');
+INSERT INTO `products` VALUES(6, 2, 'Headphones', 'Headphones description here', 19.99, 'product_headphones.jpg');
+
+========================OPCIONAL IMAGENES DE DIFERENTES TAMAÑOS O SON LAS DE ARRIBA O ESTAS==========================================
+
+INSERT INTO `products` VALUES(1, 1, 'peluche', 'juguetes divertidos', 8.99, 'descarga.jpg');
+INSERT INTO `products` VALUES(2, 1, 'bolson', 'juguetes divertidos', 15.99, 'descarga1.jpg');
+INSERT INTO `products` VALUES(3, 2, 'Monitor gamer', 'monitor tuf gamer', 299.99, 'monitor.jpg');
+INSERT INTO `products` VALUES(4, 1, 'mario', 'juguetes divertidos', 13, 'descarga2.jpg');
+INSERT INTO `products` VALUES(5, 1, 'pack-juguetes', 'juguetes divertidos', 14.49, 'descarga3.jpg');
+INSERT INTO `products` VALUES(6, 2, 'audifonos sony', 'audifonos de alta calidad', 19.99, 'audifonos.jpg');
+INSERT INTO `products` VALUES(7, 2, 'teclado', 'teclado famer', 14.49, 'teclado.jpg');
+INSERT INTO `products` VALUES(8, 2, 'Mouse', 'Mouse gamer', 14.49, 'mouse.jpg');
